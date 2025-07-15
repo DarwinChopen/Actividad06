@@ -50,4 +50,22 @@ if buscado in productos:
     print(f"Precio: {productos[buscado]["precio"]}")
     print(f"Stock: {productos[buscado]["stock"]}")
 
+print("Inventario")
+total=0
+for codigoProducto,datos in productos.items():
+    subtotal=datos["precio"]*datos["stock"]
+    total+=subtotal
+    print(f"Codigo {codigoProducto}")
+    print(f"Nombre: {datos["nombre"]}")
+    print(f"Categoria: {datos["categoria"]}")
+    print(f"Talla: {datos["talla"]}")
+    print(f"Precio: {datos["precio"]}")
+    print(f"Stock: {datos["stock"]}")
+    print(f"Subtotal: {subtotal}")
+print(f"Total del inverntario es: {total}")
+
+print("Por Categoria")
+
+
+
 
