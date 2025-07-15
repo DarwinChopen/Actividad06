@@ -3,12 +3,27 @@ cantidad=int(input("Ingrese la cantidad de productos"))
 
 for i in range(cantidad):
     print(f"Productos: {i+1}")
-    codigoProducto=input("Ingrese el codigo del producto: ")
+    while True:
+        codigoProducto=input("Ingrese el Codigo del Producto: ")
+        if codigoProducto in productos:
+            print("Este codigo ya existe, Ingrese otro")
+        else:
+            break
     nombreProducto=input("Ingrese el Nombre del Producto: ")
     categoriaProducto=input("Ingrese la Categoria del producto: ")
     talla=input("Ingrese la talla: ")
-    precioProducto=int(input("Ingrese el precio del producto: "))
-    cantidadStock=int(input("Ingrese la cantidad en stock: "))
+    while True:
+        precioProducto=float(input("Ingrese el precio del Producto: "))
+        if precioProducto<0:
+            print("El precio debe ser mayor que 0")
+        else:
+            break
+    while True:
+        cantidadStock = int(input("Ingrese la cantidad en stock: "))
+        if cantidadStock<0:
+            print("La cantidad en stock debe ser positiva")
+        else:
+            break
 
     productos[codigoProducto]={
         "nombre":nombreProducto,
