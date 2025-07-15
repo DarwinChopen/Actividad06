@@ -17,3 +17,22 @@ for i in range(cantidad):
         "precio":precioProducto,
         "stock":cantidadStock
     }
+print(f"Listado de Productos")
+for codigoProducto,datos in productos.items():
+
+    print(f"Codigo {codigoProducto}")
+    print(f"Nombre: {datos["nombre"]}")
+    print(f"Categoria: {datos["categoria"]}")
+    print(f"Talla: {datos["talla"]}")
+    print(f"Precio: {datos["precio"]}")
+    print(f"Stock: {datos["stock"]}")
+print("Busqueda de producto")
+buscado=input("Ingrese el codigo a buscar: ")
+if buscado in productos:
+    print(f"Nombre: {productos[buscado]["nombre"]}")
+    print(f"Categoria: {productos[buscado]["categoria"]}")
+    print(f"Talla: {productos[buscado]["talla"]}")
+    print(f"Precio: {productos[buscado]["precio"]}")
+    print(f"Stock: {productos[buscado]["stock"]}")
+
+
